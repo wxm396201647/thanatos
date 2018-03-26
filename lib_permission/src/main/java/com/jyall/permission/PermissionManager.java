@@ -2,6 +2,7 @@ package com.jyall.permission;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -340,13 +341,9 @@ public class PermissionManager {
             if (TextUtils.isEmpty(requestDesc)) {
                 ActivityCompat.requestPermissions(activity, requestPermissions, PERMISSION_REQUEST_CODE);
             } else {
-                //todo 拆分module_base
-//                DialogUtils.showOneChoiceDialog(activity, "", requestDesc, "知道了", new DialogUtils.OnDialogOneListener() {
-//                    @Override
-//                    public void onClick() {
-//                        ActivityCompat.requestPermissions(activity, requestPermissions, PERMISSION_REQUEST_CODE);
-//                    }
-//                });
+                final AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
+                dialog.setTitle("").setMessage(requestDesc).setPositiveButton("知道了",
+                        (dialog1, which) -> ActivityCompat.requestPermissions(activity, requestPermissions, PERMISSION_REQUEST_CODE));
             }
         }
 

@@ -3,6 +3,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+repositories {
+    mavenCentral()
+}
+
 android {
     compileSdkVersion Integer.parseInt(VERSION_SDK_COMPILE)
     defaultConfig {
@@ -29,4 +33,5 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':common-base')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
