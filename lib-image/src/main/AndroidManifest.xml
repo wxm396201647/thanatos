@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.jyall.image">
+
+    <application>
+        <activity
+            android:name=".activity.PhotoFullActivity"
+            android:label=""/>
+    </application>
+
+</manifest>

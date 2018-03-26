@@ -1,0 +1,11 @@
+<resources>
+    <declare-styleable name="TitleView">
+        <attr name="titleViewTitleText" format="reference|string" />
+        <attr name="titleViewBackShow" format="boolean" />
+        <attr name="titleViewBackText" format="reference|string" />
+        <attr name="titleViewRightText" format="reference|string" />
+        <attr name="titleViewRightImage" format="reference" />
+        <attr name="titelViewRightTextShow" format="boolean"/>
+        <attr name="titleViewRightImageShow" format="boolean"/>
+    </declare-styleable>
+</resources>

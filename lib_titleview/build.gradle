@@ -1,17 +1,15 @@
-apply plugin: 'com.android.application'
-
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion Integer.parseInt(VERSION_SDK_COMPILE)
+    buildToolsVersion VERSION_BUILD_TOOLS
+
+
     defaultConfig {
-        applicationId "com.thanatos.read"
         minSdkVersion Integer.parseInt(VERSION_SDK_MIN)
         targetSdkVersion Integer.parseInt(VERSION_SDK_TARGET)
         versionCode Integer.parseInt(VERSION_CODE)
         versionName VERSION_NAME
-        multiDexEnabled true
     }
 
     buildTypes {
@@ -20,9 +18,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':common-base')
 }
