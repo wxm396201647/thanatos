@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':lib-network', ':common-base', ':lib_log', ':lib_permission', ':lib_titleview', ":lib-image", ":lib-dialog"
