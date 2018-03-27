@@ -1,4 +1,4 @@
-package com.jyall.log;
+package com.lib.commonbase.log;
 
 import android.support.annotation.NonNull;
 

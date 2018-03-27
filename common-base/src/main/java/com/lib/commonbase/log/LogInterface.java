@@ -1,4 +1,4 @@
-package com.jyall.log;
+package com.lib.commonbase.log;
 
 /**
  * Log接口，用于切换不同的Log实现
