@@ -11,7 +11,7 @@ import android.support.annotation.NonNull;
  * Created by LinXiao on 2017-01-05.
  */
 public class LogUtils {
-
+    public static final String TAG = LogUtils.class.getSimpleName();
     public static final int VERBOSE = 0;
     public static final int DEBUG = 1;
     public static final int INFO = 2;
@@ -96,6 +96,42 @@ public class LogUtils {
     public static void e(String tag, Throwable e) {
         if (logLevel <= ERROR && logEnabled) {
             logImpl.e(tag, e);
+        }
+    }
+
+    public static void v(String message) {
+        if (logLevel <= VERBOSE && logEnabled) {
+            logImpl.v(TAG, message);
+        }
+    }
+
+    public static void d(String message) {
+        if (logLevel <= DEBUG && logEnabled) {
+            logImpl.d(TAG, message);
+        }
+    }
+
+    public static void i(String message) {
+        if (logLevel <= INFO && logEnabled) {
+            logImpl.i(TAG, message);
+        }
+    }
+
+    public static void w(String message) {
+        if (logLevel <= WARNING && logEnabled) {
+            logImpl.w(TAG, message);
+        }
+    }
+
+    public static void e(String message) {
+        if (logLevel <= ERROR && logEnabled) {
+            logImpl.e(TAG, message);
+        }
+    }
+
+    public static void e(Throwable e) {
+        if (logLevel <= ERROR && logEnabled) {
+            logImpl.e(TAG, e);
         }
     }
 

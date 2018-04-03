@@ -1,0 +1,29 @@
+    /**
+     * get请求
+     */
+    public static GetRequest get(String url);
+
+    /**
+     * post请求和文件上传
+     */
+    public static PostRequest post(String url);
+
+    /**
+     * delete请求
+     */
+    public static DeleteRequest delete(String url) ;
+
+    /**
+     * 自定义请求
+     */
+    public static CustomRequest custom();
+
+    /**
+     * 文件下载
+     */
+    public static DownloadRequest downLoad(String url) ;
+
+    /**
+     * put请求
+     */
+    public static PutRequest put(String url);
