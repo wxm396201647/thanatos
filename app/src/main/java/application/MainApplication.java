@@ -7,6 +7,24 @@ import com.thanatos.read.BuildConfig;
 
 /**
  * Created by wang.ming5 on 2018/3/25.
+ *
+ *  //  ┏┓　　　┏┓
+ //┏┛┻━━━┛┻┓
+ //┃　　　　　　　┃
+ //┃　　　━　　　┃
+ //┃　┳┛　┗┳　┃
+ //┃　　　　　　　┃
+ //┃　　　┻　　　┃
+ //┃　　　　　　　┃
+ //┗━┓　　　┏━┛
+ //    ┃　　　┃   神兽保佑
+ //    ┃　　　┃   代码无BUG！
+ //    ┃　　　┗━━━┓
+ //    ┃　　　　　　　┣┓
+ //    ┃　　　　　　　┏┛
+ //    ┗┓┓┏━┳┓┏┛
+ //      ┃┫┫　┃┫┫
+ //      ┗┻┛　┗┻┛
  */
 
 public class MainApplication extends Application {
