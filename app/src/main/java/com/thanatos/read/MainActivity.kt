@@ -2,20 +2,26 @@ package com.thanatos.read
 
 import android.os.Bundle
 import android.support.design.widget.NavigationView
+import android.support.design.widget.TabLayout
 import android.support.v4.view.GravityCompat
+import android.support.v4.view.ViewPager
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.alibaba.android.arouter.facade.Postcard
-import com.alibaba.android.arouter.facade.annotation.Route
-import com.alibaba.android.arouter.facade.callback.NavigationCallback
-import com.alibaba.android.arouter.launcher.ARouter
+import android.view.View
+import com.google.common.collect.Lists
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import java.util.*
 
-@Route(path = "/home/mainActivity")
+
+
+
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+    private var tab: TabLayout? = null
+    private var pager: ViewPager? = null
+    private var list: MutableList<String> = Lists.newArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +34,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        /*初始化界面*/
+        initViews()
+        /*初始化数据*/
+        initData()
+        /*设置Adapter*/
+        pager?.setAdapter(MyAdapter(supportFragmentManager, list))
+        /*Tab与ViewPager绑定*/
+        tab?.setupWithViewPager(pager)
+    }
+
+    /*初始化数据*/
+    private fun initData() {
+        for (i in 0..10) {
+            list.add(String.format(Locale.CHINA,"第%02d页",i));
+        }
+    }
+
+    /*初始化界面*/
+    private fun initViews() {
+        this.pager = findViewById<View>(R.id.pager) as ViewPager
+        this.tab = findViewById<View>(R.id.tab) as TabLayout
     }
 
     override fun onBackPressed() {
@@ -50,7 +78,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
             R.id.action_search -> {
-                ARouter.getInstance().build("home/search").navigation(this)
                 return true
             }
             else -> return super.onOptionsItemSelected(item)

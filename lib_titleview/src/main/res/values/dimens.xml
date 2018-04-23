@@ -1,4 +1,0 @@
-<resources>
-    <!-- 标题栏高度 -->
-    <dimen name="toolbar_height">48dp</dimen>
-</resources>

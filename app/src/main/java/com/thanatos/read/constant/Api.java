@@ -6,4 +6,5 @@ package com.thanatos.read.constant;
 
 public class Api {
     public static final String BASE_URL = "";
+    public static final String APP_DOMAIN = "";
 }
