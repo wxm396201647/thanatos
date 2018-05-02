@@ -1,4 +1,4 @@
-package com.thanatos.read.constant;
+package com.thanatos.read.cache;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;

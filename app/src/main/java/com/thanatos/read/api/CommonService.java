@@ -1,4 +1,4 @@
-package com.thanatos.read.constant;
+package com.thanatos.read.api;
 
 import java.util.List;
 
@@ -16,6 +16,6 @@ public interface CommonService {
     String HEADER_API_VERSION = "Accept: application/vnd.github.v3+json";
 
     @Headers({HEADER_API_VERSION})
-    @GET("/users")
+    @GET("/book")
     Observable<List<String>> getUsers(@Query("since") int lastIdQueried, @Query("per_page") int perPage);
 }

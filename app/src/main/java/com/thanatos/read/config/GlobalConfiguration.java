@@ -6,16 +6,14 @@ import android.support.v4.app.FragmentManager;
 import android.text.TextUtils;
 
 import com.jess.arms.base.delegate.AppLifecycles;
-import com.jess.arms.di.module.ClientModule;
 import com.jess.arms.di.module.GlobalConfigModule;
 import com.jess.arms.http.GlobalHttpHandler;
 import com.jess.arms.http.log.RequestInterceptor;
 import com.jess.arms.integration.ConfigModule;
 import com.jess.arms.utils.ArmsUtils;
 import com.squareup.leakcanary.LeakCanary;
-import com.squareup.leakcanary.RefWatcher;
 import com.thanatos.read.BuildConfig;
-import com.thanatos.read.constant.Api;
+import com.thanatos.read.api.Api;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,7 +23,6 @@ import java.io.File;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import io.rx_cache2.internal.RxCache;
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
