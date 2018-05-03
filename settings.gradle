@@ -1,1 +1,1 @@
-include ':read'
+include ':read', ':library-net'
