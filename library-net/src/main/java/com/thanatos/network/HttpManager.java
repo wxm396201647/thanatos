@@ -34,7 +34,7 @@ public class HttpManager {
         return api;
     }
 
-    public static OkHttpClient genericClient() {
+    private static OkHttpClient genericClient() {
         if (okHttpClient == null) {
             okHttpClient = initOkHttp();
         }
